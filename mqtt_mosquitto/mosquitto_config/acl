@@ -1,0 +1,19 @@
+# Mosquitto Access Control List (ACL)
+# Place this file in ./vols/mosquitto/config/acl
+
+# Publisher user - can publish to any topic
+user publisher
+topic write #
+
+# Subscriber users - can only subscribe to topics
+user subscriber1
+topic read #
+
+user subscriber2
+topic read #
+
+user subscriber3
+topic read #
+
+# Optional: Allow all users to access $SYS topics for system info
+pattern read $SYS/#

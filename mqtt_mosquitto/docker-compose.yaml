@@ -1,0 +1,21 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.21
+    container_name: mosquitto-broker
+    restart: unless-stopped
+    ports:
+      - "1883:1883"    # MQTT
+      - "8883:8883"    # MQTT SSL (for future use)
+      - "9001:9001"    # WebSocket
+    volumes:
+      - ./vols/mosquitto/config:/mosquitto/config
+      - ./vols/mosquitto/data:/mosquitto/data
+      - ./vols/mosquitto/log:/mosquitto/log
+      - ./vols/mosquitto/certs:/mosquitto/certs  # for future SSL certificates
+
+    networks:
+      - mqtt-network
+
+networks:
+  mqtt-network:
+    driver: bridge

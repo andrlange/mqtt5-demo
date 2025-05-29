@@ -1,0 +1,45 @@
+# Spring Boot Application Configuration
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mqtt_publisher
+
+# MQTT Configuration
+mqtt:
+  broker:
+    url: tcp://localhost:1883
+    client-id: spring-boot-publisher
+    username: publisher
+    password: publisher123
+    auto-reconnect: true
+    clean-start: true
+    session-expiry-interval: 3600
+    keep-alive-interval: 60
+    connection-timeout: 10
+
+  # Topics Configuration
+  topics:
+    all-clients: "clients/all"
+    client-prefix: "client/"
+    sys-topic: "$SYS/#"
+
+# Logging Configuration
+logging:
+  level:
+    com.example.mqttpublisher: DEBUG
+    org.eclipse.paho: INFO
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
