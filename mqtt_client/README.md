@@ -170,18 +170,19 @@ The client logs various connection events:
 1. **Start Mosquitto Broker**:
    ```bash
    cd mqtt-demo
+   cd mqtt_mosquitto
    docker-compose up -d
    ```
 
 2. **Start Spring Boot Publisher**:
    ```bash
-   cd spring-boot-mqtt-publisher
+   cd mqtt_publisher
    mvn spring-boot:run
    ```
 
 3. **Start Dart Subscriber** (Terminal 1):
    ```bash
-   cd dart-mqtt-subscriber
+   cd mqtt_client
    dart run ./lib/main.dart -u subscriber1 -p sub123
    ```
 
@@ -215,10 +216,10 @@ The client logs various connection events:
 ### Compile to Native Executable:
 ```bash
 # Compile for current platform
-dart compile exe main.dart -o mqtt_subscriber
+dart compile exe ./lib/main.dart -o mqtt_client
 
 # Run compiled executable
-./mqtt_subscriber -u subscriber1 -p sub123
+./mqtt_client -u subscriber1 -p sub123
 ```
 
 ### Platform-Specific Builds:
