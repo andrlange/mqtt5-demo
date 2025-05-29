@@ -339,16 +339,17 @@ openssl req -new -x509 -days 365 -extensions v3_ca -keyout ca.key -out ca.crt
 ### Project Structure
 ```
 mqtt-demo/
-├── mosquitto/
+├── mqtt_mosquitto/
 │   ├── docker-compose.yaml
 │   ├── vols/mosquitto/config/
 │   └── setup scripts
-├── spring-boot-mqtt-publisher/
+├── mqtt_publisher/
 │   ├── src/main/java/
 │   ├── pom.xml
-│   └── application.yml
-└── dart-mqtt-subscriber/
-    ├── main.dart
+│   └── src/resources/application.yml
+└── mqtt_client/
+    ├── lib/
+    │   └── main.dart
     ├── pubspec.yaml
     └── helper scripts
 ```
