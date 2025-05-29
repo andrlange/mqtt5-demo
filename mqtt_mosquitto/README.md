@@ -185,8 +185,8 @@ telnet localhost 1883
 ## Next Steps
 
 Once this Mosquitto broker is running, you can:
-1. Create your Spring Boot MQTT publisher
-2. Build your Dart MQTT subscriber
+1. Run your Spring Boot MQTT publisher
+2. Run your Dart MQTT subscriber
 3. Test the complete message flow
 
 The broker is now ready to handle MQTT5 messages from your Spring Boot application and deliver them to your Dart client!
