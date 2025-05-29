@@ -127,7 +127,7 @@ If you prefer manual commands:
 ```bash
 # Add user to password file
 docker run --rm -v "$(pwd)/vols/mosquitto/config:/mosquitto/config" \
-    eclipse-mosquitto:2.0.21 mosquitto_passwd /mosquitto/config/passwd username password
+    eclipse-mosquitto:2.0.21 mosquitto_passwd -b /mosquitto/config/passwd username password
 
 # Remove user from password file  
 docker run --rm -v "$(pwd)/vols/mosquitto/config:/mosquitto/config" \
