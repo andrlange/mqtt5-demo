@@ -28,13 +28,13 @@ dart pub get
 ### 2. Run the Subscriber
 ```bash
 # Basic usage with subscriber1 credentials
-dart run main.dart -u subscriber1 -p sub123
+dart run ./lib/main.dart -u subscriber1 -p sub123
 
 # With custom host and port
-dart run main.dart -u subscriber2 -p sub456 -h localhost --port 1883
+dart run ./lib/main.dart -u subscriber2 -p sub456 -h localhost --port 1883
 
 # With custom client ID
-dart run main.dart --username subscriber3 --password sub789 --client-id my-dart-client
+dart run ./lib/main.dart --username subscriber3 --password sub789 --client-id my-dart-client
 ```
 
 ### 3. Test Message Reception
@@ -68,25 +68,25 @@ curl -X POST http://localhost:8080/api/mqtt/publish/client/subscriber1 \
 ### Basic Usage
 ```bash
 # Connect as subscriber1
-dart run main.dart -u subscriber1 -p sub123
+dart run ./lib/main.dart -u subscriber1 -p sub123
 
 # Connect as subscriber2  
-dart run main.dart -u subscriber2 -p sub456
+dart run ./lib/main.dart -u subscriber2 -p sub456
 
 # Connect as subscriber3
-dart run main.dart -u subscriber3 -p sub789
+dart run ./lib/main.dart -u subscriber3 -p sub789
 ```
 
 ### Advanced Usage
 ```bash
 # Connect to remote broker
-dart run main.dart -u subscriber1 -p sub123 -h 192.168.1.100 --port 1883
+dart run ./lib/main.dart -u subscriber1 -p sub123 -h 192.168.1.100 --port 1883
 
 # Custom client ID
-dart run main.dart -u subscriber1 -p sub123 --client-id my-custom-client-id
+dart run ./lib/main.dart -u subscriber1 -p sub123 --client-id my-custom-client-id
 
 # Show help
-dart run main.dart --help
+dart run ./lib/main.dart --help
 ```
 
 ## Message Output Format
@@ -182,12 +182,12 @@ The client logs various connection events:
 3. **Start Dart Subscriber** (Terminal 1):
    ```bash
    cd dart-mqtt-subscriber
-   dart run main.dart -u subscriber1 -p sub123
+   dart run ./lib/main.dart -u subscriber1 -p sub123
    ```
 
 4. **Start Another Dart Subscriber** (Terminal 2):
    ```bash
-   dart run main.dart -u subscriber2 -p sub456
+   dart run ./lib/main.dart -u subscriber2 -p sub456
    ```
 
 5. **Test Broadcast Message**:
