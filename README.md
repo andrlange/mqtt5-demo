@@ -397,7 +397,7 @@ dart analyze
 - [MQTT 5.0 Specification](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
 - [Eclipse Mosquitto Documentation](https://mosquitto.org/documentation/)
 - [Spring Boot MQTT Integration](https://spring.io/guides/gs/messaging-rabbitmq/)
-- [Dart MQTT Client Package](https://pub.dev/packages/mqtt_client)
+- [Dart MQTT Client Package](https://pub.dev/packages/mqtt5_client)
 
 ## 🎉 Success Criteria
 
@@ -415,4 +415,4 @@ When everything is working correctly, you should see:
 
 ---
 
-*Built with ❤️ using Eclipse Mosquitto, Spring Boot 3.4, and Dart 3.8*
+*Built with ❤️ using Eclipse Mosquitto, Spring Boot 3.5, and Dart 3.8*
