@@ -16,7 +16,7 @@ A Spring Boot application that connects to Mosquitto MQTT broker as a producer w
 
 ```
 src/main/java/cool/cfapps/mqtt_broker/
-├── MqttBrokerApplication.java             # Main application class
+├── MqttPublisherApplication.java          # Main application class
 ├── config/
 │   └── MqttConfig.java                    # MQTT5 client configuration
 ├── controller/
@@ -61,7 +61,7 @@ mvn spring-boot:run
 
 # Or run the JAR
 mvn clean package
-java -jar target/mqtt-broker-1.0.0.jar
+java -jar target/mqtt-publisher-1.0.0.jar
 ```
 
 ### 4. Test API Endpoints
@@ -184,7 +184,7 @@ curl http://localhost:8080/actuator/metrics
 - [ ] Add Micrometer metrics
 - [ ] Implement distributed tracing
 - [ ] Add custom health indicators
-- [ ] Log aggregation (ELK stack)
+- [ ] Log aggregation
 
 ### High Availability
 - [ ] Multiple MQTT broker instances
@@ -218,6 +218,6 @@ mosquitto_pub -h localhost -p 1883 -V 5 -u publisher -P publisher123 -t test -m 
 Once this Spring Boot MQTT publisher is working:
 1. ✅ **Mosquitto Broker** (Complete)
 2. ✅ **Spring Boot Publisher** (Complete)
-3. 🚀 **Dart MQTT Subscriber** (Next: Create Dart client to receive messages)
+3. 🚀 **Dart MQTT Subscriber** (Next: Run Dart client to receive messages)
 
 The Spring Boot application is now ready to publish MQTT5 messages to your Mosquitto broker! 🎉
