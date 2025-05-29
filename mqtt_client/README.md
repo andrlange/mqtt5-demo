@@ -225,8 +225,8 @@ dart compile exe ./lib/main.dart -o mqtt_client
 ### Platform-Specific Builds:
 ```bash
 # For different platforms, compile on target platform
-# Windows: mqtt_subscriber.exe
-# macOS/Linux: mqtt_subscriber
+# Windows: mqtt_client.exe
+# macOS/Linux: mqtt_client
 ```
 
 ## Development
